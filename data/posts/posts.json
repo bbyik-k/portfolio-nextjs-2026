@@ -1,0 +1,29 @@
+[
+  {
+    "slug": "app-router-layout",
+    "title": "2 4 App Router에서 layout을 설계하는 방식",
+    "excerpt": "Header/Footer, 섹션 레이아웃, 네비게이션 상태까지 한 번에 정리합니다.",
+    "date": "2026-02-04",
+    "tags": ["Next.js", "App Router"],
+    "readingTime": "4 min",
+    "featured": true
+  },
+  {
+    "slug": "tailwind-v4-setup",
+    "title": "Tailwind v4 + Next.js 최신 셋업 포인트",
+    "excerpt": "문서와 템플릿의 차이, globals.css 구성, 유지보수 관점의 기준을 정리합니다.",
+    "date": "2026-02-03",
+    "tags": ["Tailwind", "CSS"],
+    "readingTime": "6 min",
+    "featured": true
+  },
+  {
+    "slug": "metadata-generateMetadata",
+    "title": "metadata / generateMetadata 실전 사용 패턴",
+    "excerpt": "정적/동적 메타데이터를 어떤 기준으로 나누고, 어디서 관리할지 정리합니다.",
+    "date": "2026-02-02",
+    "tags": ["SEO", "Metadata"],
+    "readingTime": "7 min",
+    "featured": false
+  }
+]
