@@ -1,9 +1,10 @@
-import { getFeaturedPosts } from '@/service/posts';
+import { Post } from '@/types/post';
 import Link from 'next/link';
 import PostCard from './PostCard';
 
-export default async function FeaturedPosts() {
-  const posts = await getFeaturedPosts();
+type Props = { posts: Post[] };
+
+export default function FeaturedPosts({ posts }: Props) {
   return (
     <section className='pb-16'>
       <div className='mx-auto max-w-5xl px-4'>

@@ -25,5 +25,32 @@
     "tags": ["SEO", "Metadata"],
     "readingTime": "7 min",
     "featured": false
+  },
+  {
+    "slug": "metadata-generateMetadata2",
+    "title": "Next.js 15 릴리즈 노트",
+    "excerpt": "Next.js 15 릴리즈 노트",
+    "date": "2026-02-02",
+    "tags": ["Next.js", "Release"],
+    "readingTime": "7 min",
+    "featured": false
+  },
+  {
+    "slug": "metadata-generateMetadata3",
+    "title": "metadata / generateMetadata 실전 사용 패턴",
+    "excerpt": "정적/동적 메타데이터를 어떤 기준으로 나누고, 어디서 관리할지 정리합니다.",
+    "date": "2026-02-02",
+    "tags": ["SEO", "Metadata"],
+    "readingTime": "7 min",
+    "featured": false
+  },
+  {
+    "slug": "metadata-generateMetadata6",
+    "title": "Next.js 15 릴리즈 노트",
+    "excerpt": "Next.js 15 릴리즈 노트",
+    "date": "2026-02-02",
+    "tags": ["Next.js", "Release"],
+    "readingTime": "7 min",
+    "featured": false
   }
 ]
