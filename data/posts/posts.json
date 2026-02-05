@@ -1,39 +1,36 @@
 [
   {
     "slug": "app-router-layout",
-    "title": "2 4 App Router에서 layout을 설계하는 방식",
-    "excerpt": "Header/Footer, 섹션 레이아웃, 네비게이션 상태까지 한 번에 정리합니다.",
-    "date": "2026-02-04",
-    "tags": ["Next.js", "App Router"],
+    "title": "🌦️ 날씨 안내 콘텐츠",
+    "excerpt": "실시간 날씨 데이터와 다국어 음성 안내 기능을 통해 맞춤형 예보를 제공하는 서비스",
+    "date": "2023-01-16",
+    "tags": ["React", "Typescript", "JavaScript", "LocalStorage", "기상청 API", "i18n(다국어지원)", "TTS"],
     "readingTime": "4 min",
-    "featured": true
-  },
-  {
-    "slug": "tailwind-v4-setup",
-    "title": "Tailwind v4 + Next.js 최신 셋업 포인트",
-    "excerpt": "문서와 템플릿의 차이, globals.css 구성, 유지보수 관점의 기준을 정리합니다.",
-    "date": "2026-02-03",
-    "tags": ["Tailwind", "CSS"],
-    "readingTime": "6 min",
-    "featured": true
+    "featured": true,
+    "thumbnail": "/images/projects/weather/weather-1.webp",
+    "thumbnailAlt": "날씨 안내 콘텐츠"
   },
   {
     "slug": "metadata-generateMetadata",
-    "title": "metadata / generateMetadata 실전 사용 패턴",
+    "title": "🤖 경비로봇 에스코트 신기능 개발",
     "excerpt": "정적/동적 메타데이터를 어떤 기준으로 나누고, 어디서 관리할지 정리합니다.",
     "date": "2026-02-02",
     "tags": ["SEO", "Metadata"],
     "readingTime": "7 min",
-    "featured": false
+    "featured": false,
+    "thumbnail": "/images/projects/escort/escort-1.webp",
+    "thumbnailAlt": "Tailwind v4 + Next.js 최신 셋업 포인트"
   },
   {
     "slug": "metadata-generateMetadata2",
-    "title": "Next.js 15 릴리즈 노트",
+    "title": "🔧 RCMS 관리자 사이트 기능 관리",
     "excerpt": "Next.js 15 릴리즈 노트",
     "date": "2026-02-02",
     "tags": ["Next.js", "Release"],
     "readingTime": "7 min",
-    "featured": false
+    "featured": false,
+    "thumbnail": "/images/projects/rcms/rcms-1.webp",
+    "thumbnailAlt": "metadata / generateMetadata 실전 사용 패턴"
   },
   {
     "slug": "metadata-generateMetadata3",
@@ -42,7 +39,9 @@
     "date": "2026-02-02",
     "tags": ["SEO", "Metadata"],
     "readingTime": "7 min",
-    "featured": false
+    "featured": false,
+    "thumbnail": "/images/projects/weather/weather-1.webp",
+    "thumbnailAlt": "Weather App"
   },
   {
     "slug": "metadata-generateMetadata6",
@@ -51,6 +50,8 @@
     "date": "2026-02-02",
     "tags": ["Next.js", "Release"],
     "readingTime": "7 min",
-    "featured": false
+    "featured": false,
+    "thumbnail": "/images/projects/weather/weather-1.webp",
+    "thumbnailAlt": "Weather App"
   }
 ]

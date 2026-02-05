@@ -7,4 +7,6 @@ export type Post = {
   tags?: string[];
   readingTime?: string;
   featured?: boolean;
+  thumbnail: string;
+  thumbnailAlt?: string;
 };

@@ -3,6 +3,7 @@ import { Post } from '@/types/post';
 import Link from 'next/link';
 import './ProjectCarousel.css';
 import { useKeenSlider, KeenSliderPlugin } from 'keen-slider/react';
+import Image from 'next/image';
 // import 'keen-slider/keen-slider.min.css';
 
 const carousel: KeenSliderPlugin = (slider) => {
@@ -37,6 +38,7 @@ export default function ProjectCarousel({ posts }: Props) {
   );
 
   if (posts.length === 0) return null;
+  console.log(posts);
 
   return (
     <div className='wrapper'>
@@ -45,6 +47,9 @@ export default function ProjectCarousel({ posts }: Props) {
           {posts.map((post, index) => (
             <div key={post.slug} className={`carousel__cell ${SLIDE_STYLES[index % SLIDE_STYLES.length]}`}>
               <Link href={`/posts/${post.slug}`} className='carousel__post-card' aria-label={`Read: ${post.title}`}>
+                <div className='relative h-[150px] w-full overflow-hidden rounded-lg'>
+                  <Image src={post.thumbnail} alt={post.thumbnailAlt ?? post.title} fill sizes='200px' className='object-cover object-center' priority={index < 2} />
+                </div>
                 <p className='carousel__post-meta'>
                   <time dateTime={post.date}>{post.date}</time>
                   {post.readingTime ? ` · ${post.readingTime}` : ''}
