@@ -1,8 +1,8 @@
 import { Post } from '@/types/post';
 import Link from 'next/link';
+import { getTagClassNameByName } from '@/lib/tagStyles';
 
 export default function PostCard({ post }: { post: Post }) {
-  console.log(post);
   return (
     <li className='group'>
       <Link href={`/posts/${post.slug}`} className='block rounded-2xl border border-zinc-800 bg-zinc-950/40 p-5 transition hover:border-zinc-700'>
@@ -21,7 +21,7 @@ export default function PostCard({ post }: { post: Post }) {
         {post.tags && post.tags.length > 0 && (
           <div className='mt-4 flex flex-wrap gap-2'>
             {post.tags.map((tag) => (
-              <span key={tag} className='rounded-full border border-zinc-800 px-2 py-1 text-[11px] text-zinc-400'>
+              <span key={tag} className={getTagClassNameByName(tag)}>
                 {tag}
               </span>
             ))}
