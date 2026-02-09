@@ -4,13 +4,16 @@
 export type TagType = 'core' | 'api' | 'external' | 'ui';
 
 export type Post = {
-  slug: string;
   title: string;
-  excerpt: string;
+  slug: string;
+  techStack: string[];
+  summary: string;
+  description: string;
+  organization: string;
+  periodStart: string;
+  periodEnd: string;
   date: string;
-  tags?: string[];
-  readingTime?: string;
   featured?: boolean;
   thumbnail: string;
-  thumbnailAlt?: string;
+  thumbnailAlt: string;
 };

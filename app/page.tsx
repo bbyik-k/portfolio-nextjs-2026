@@ -9,8 +9,8 @@ export default async function HomePage() {
   return (
     <>
       <Hero />
-      <FeaturedPosts posts={featuredPosts} />
-      <ProjectCarousel posts={allPosts} />
+      <FeaturedPosts posts={allPosts} />
+      <ProjectCarousel posts={featuredPosts} />
     </>
   );
 }
