@@ -1,6 +1,6 @@
 import FeaturedPosts from './components/home/FeaturedPosts';
 import Hero from './components/home/Hero';
-import ProjectCarousel from './components/home/ProjectCarousel';
+import ProjectCarousel from './components/home/ProjectCarousel/ProjectCarousel';
 import { getAllPosts, getFeaturedPosts } from '@/service/posts';
 
 export default async function HomePage() {
