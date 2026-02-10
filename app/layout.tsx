@@ -34,7 +34,7 @@ export default function RootLayout({
     <html lang='ko'>
       <body className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} antialiased min-h-screen bg-background text-foreground`}>
         <Header />
-        <main className='container mx-auto max-w-5xl px-4 py-10'>{children}</main>
+        <main className='container mx-auto max-w-full px-4 py-10 bg-[url("/images/LooperGroup2.png")] bg-no-repeat bg-cover bg-fixed bg-center'> {children}</main>
         <Footer />
       </body>
     </html>
