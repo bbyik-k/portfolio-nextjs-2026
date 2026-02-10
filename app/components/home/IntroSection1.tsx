@@ -46,22 +46,24 @@ function BulletItem({ children }: { children: React.ReactNode }) {
 export default function IntroSection1() {
   return (
     // <section className='min-h-[calc(100vh-4rem)] flex flex-col md:flex-row items-stretch border border-zinc-800 '>
-    <section className='min-h-[calc(100vh-4rem)] flex flex-col md:flex-row items-stretch border border-zinc-800 bg-zinc-900/50 backdrop-blur-sm'>
-      {/* 좌측: 텍스트 — 가능한 만큼 왼쪽에, 답답하지 않게 여백 유지 */}
-      <div className='flex min-w-0 flex-1 flex-col justify-center py-16 pl-6 pr-6 md:pl-8 md:pr-10 lg:pl-10 lg:pr-12'>
-        <div className='w-full'>
-          <h2 className='text-2xl font-bold leading-snug text-[#FFD2A9] sm:text-3xl md:text-4xl'>{TITLE}</h2>
-          <ul className='mt-10 flex flex-col gap-5 sm:gap-6' role='list'>
-            {BULLETS.map((item, i) => (
-              <BulletItem key={i}>{item}</BulletItem>
-            ))}
-          </ul>
+    <section className='min-h-[calc(100vh-4rem)] w-full border border-none border-t-zinc-800 border-b-zinc-800 bg-zinc-900/50 backdrop-blur-sm'>
+      <div className='mx-auto flex w-full max-w-7xl flex-col md:flex-row items-stretch'>
+        {/* 좌측: 텍스트 — 가능한 만큼 왼쪽에, 답답하지 않게 여백 유지 */}
+        <div className='flex min-w-0 flex-1 flex-col justify-center py-16 pl-6 pr-6 md:pl-8 md:pr-10 lg:pl-10 lg:pr-12 '>
+          <div className='w-full'>
+            <h2 className='text-2xl font-bold leading-snug text-[#FFD2A9] sm:text-3xl md:text-4xl'>{TITLE}</h2>
+            <ul className='mt-10 flex flex-col gap-5 sm:gap-6' role='list'>
+              {BULLETS.map((item, i) => (
+                <BulletItem key={i}>{item}</BulletItem>
+              ))}
+            </ul>
+          </div>
         </div>
-      </div>
 
-      {/* 우측: 이미지 — 우측 밀착, 좌측이 잘리지 않도록 object-left */}
-      <div className='relative w-full shrink-0 md:w-[42%] lg:w-[44%] min-h-[320px] md:min-h-0'>
-        <Image src={DETAIL_IMAGE.src} alt={DETAIL_IMAGE.alt} fill className='object-contain object-left' sizes='(max-width: 768px) 100vw, 44vw' priority={false} />
+        {/* 우측: 이미지 — 컨텐츠 폭 기준으로만 차지, 가능한 한 좁게 */}
+        <div className='relative shrink-0 w-[320px] aspect-7/13 overflow-hidden'>
+          <Image src={DETAIL_IMAGE.src} alt={DETAIL_IMAGE.alt} fill className='object-contain object-left' sizes='(max-width: 768px) 100vw, 480px' priority={false} />
+        </div>
       </div>
     </section>
   );

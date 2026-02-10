@@ -33,7 +33,7 @@ function BulletItem({ children }: { children: React.ReactNode }) {
 
 export default function IntroSection2() {
   return (
-    <section className='min-h-[calc(100vh-4rem)] flex flex-col md:flex-row-reverse items-stretch bg-zinc-900/50 backdrop-blur-sm'>
+    <section className='min-h-[calc(100vh-4rem)] w-full flex flex-col md:flex-row-reverse items-stretch border border-none  border-b-zinc-800 bg-zinc-900/50 backdrop-blur-sm'>
       {/* 좌측: 텍스트 — 가능한 만큼 왼쪽에, 답답하지 않게 여백 유지 */}
       <div className='flex min-w-0 flex-1 flex-col justify-center py-16 pl-6 pr-6 md:pl-8 md:pr-10 lg:pl-10 lg:pr-12'>
         <div className='w-full'>
