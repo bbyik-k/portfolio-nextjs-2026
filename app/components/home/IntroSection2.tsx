@@ -1,6 +1,6 @@
-import Image from 'next/image';
+import IntroSection from './IntroSection';
 
-const TITLE = <>🌟저는 이렇게 일하고 있어요.</>;
+const TITLE = <>🌟 저는 이렇게 일하고 있어요.</>;
 
 const BULLETS: React.ReactNode[] = [
   <>
@@ -20,36 +20,8 @@ const BULLETS: React.ReactNode[] = [
   </>,
 ];
 
-const DETAIL_IMAGE = { src: '/images/detail/detail.png', alt: '프론트엔드 개발·협업 관련 콘셉트 이미지' } as const;
-
-function BulletItem({ children }: { children: React.ReactNode }) {
-  return (
-    <li className='flex gap-3 text-zinc-300 leading-relaxed'>
-      <span className='mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-500' aria-hidden />
-      <span className='[&>code]:rounded [&>code]:bg-zinc-700/80 [&>code]:px-1.5 [&>code]:py-0.5 [&>code]:text-zinc-200 [&>code]:font-medium'>{children}</span>
-    </li>
-  );
-}
+const IMAGE = { src: '/images/detail/detail.png', alt: '프론트엔드 개발 및 협업 관련 콘셉트 이미지' } as const;
 
 export default function IntroSection2() {
-  return (
-    <section className='min-h-[calc(100vh-4rem)] w-full flex flex-col md:flex-row-reverse items-stretch border border-none  border-b-zinc-800 bg-zinc-900/50 backdrop-blur-sm'>
-      {/* 좌측: 텍스트 — 가능한 만큼 왼쪽에, 답답하지 않게 여백 유지 */}
-      <div className='flex min-w-0 flex-1 flex-col justify-center py-16 pl-6 pr-6 md:pl-8 md:pr-10 lg:pl-10 lg:pr-12'>
-        <div className='w-full'>
-          <h2 className='text-2xl font-bold leading-snug text-[#86B8FE] sm:text-3xl md:text-4xl'>{TITLE}</h2>
-          <ul className='mt-10 flex flex-col gap-5 sm:gap-6' role='list'>
-            {BULLETS.map((item, i) => (
-              <BulletItem key={i}>{item}</BulletItem>
-            ))}
-          </ul>
-        </div>
-      </div>
-
-      {/* 우측: 이미지 — 우측 밀착, 좌측이 잘리지 않도록 object-left */}
-      <div className='relative w-full shrink-0 md:w-[42%] lg:w-[44%] min-h-[320px] md:min-h-0'>
-        <Image src={DETAIL_IMAGE.src} alt={DETAIL_IMAGE.alt} fill className='object-contain object-left' sizes='(max-width: 768px) 100vw, 44vw' priority={false} />
-      </div>
-    </section>
-  );
+  return <IntroSection imagePosition='left' titleColor='text-[#86B8FE]' title={TITLE} bullets={BULLETS} image={IMAGE} />;
 }
