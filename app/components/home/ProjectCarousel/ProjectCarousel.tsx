@@ -40,29 +40,39 @@ export default function ProjectCarousel({ posts }: Props) {
   if (posts.length === 0) return null;
 
   return (
-    <div className='wrapper'>
-      <div className='scene'>
-        <div className='carousel keen-slider' ref={sliderRef}>
-          {posts.map((post, index) => (
-            <div key={post.slug} className={`carousel__cell ${SLIDE_STYLES[index % SLIDE_STYLES.length]}`}>
-              <Link href={`/posts/${post.slug}`} className='carousel__post-card' aria-label={`Read: ${post.title}`}>
-                <div className='carousel__post-image'>
-                  <Image src={post.thumbnail} alt={post.thumbnailAlt ?? post.title} fill sizes='(max-width: 768px) 100vw, 480px' className='object-cover object-center' priority={index < 2} />
+    <section className='w-full bg-zinc-900/50 backdrop-blur-sm py-24 md:py-32'>
+      <div className='mx-auto w-full max-w-7xl px-6 md:px-8'>
+        {/* 섹션 헤더 */}
+        <header className='mb-10 md:mb-14 text-center'>
+          {/* <p className='text-xs tracking-[0.35em] text-zinc-400'>PROJECTS</p> */}
+          <h2 className='mt-3 text-3xl font-bold tracking-tight text-zinc-100 md:text-4xl'>PROJECTS</h2>
+          <p className='mt-3 text-zinc-400'>Selected Works</p>
+        </header>
+        <div className='wrapper'>
+          <div className='scene'>
+            <div className='carousel keen-slider' ref={sliderRef}>
+              {posts.map((post, index) => (
+                <div key={post.slug} className={`carousel__cell ${SLIDE_STYLES[index % SLIDE_STYLES.length]}`}>
+                  <Link href={`/posts/${post.slug}`} className='carousel__post-card' aria-label={`Read: ${post.title}`}>
+                    <div className='carousel__post-image'>
+                      <Image src={post.thumbnail} alt={post.thumbnailAlt ?? post.title} fill sizes='(max-width: 768px) 100vw, 480px' className='object-cover object-center' priority={index < 2} />
+                    </div>
+                    <div className='carousel__post-body'>
+                      <p className='carousel__post-meta'>
+                        <time dateTime={post.date}>{post.date}</time>
+                        {/* {post.readingTime ? ` · ${post.readingTime}` : ''} */}
+                      </p>
+                      <h3 className='carousel__post-title'>{post.title}</h3>
+                      <p className='carousel__post-excerpt'>{post.summary}</p>
+                      <span className='carousel__post-cta'>Read →</span>
+                    </div>
+                  </Link>
                 </div>
-                <div className='carousel__post-body'>
-                  <p className='carousel__post-meta'>
-                    <time dateTime={post.date}>{post.date}</time>
-                    {/* {post.readingTime ? ` · ${post.readingTime}` : ''} */}
-                  </p>
-                  <h3 className='carousel__post-title'>{post.title}</h3>
-                  <p className='carousel__post-excerpt'>{post.summary}</p>
-                  <span className='carousel__post-cta'>Read →</span>
-                </div>
-              </Link>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
