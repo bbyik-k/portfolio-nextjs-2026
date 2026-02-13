@@ -6,6 +6,7 @@ import { getAllPosts } from '@/service/posts'; // 지금 쓰는 데이터 소스
 import { Mark } from '@/app/components/mdx/Mark';
 import { ProjectImageGallery } from '@/app/components/projects/ProjectImageGallery';
 import { ProjectImage } from '@/app/components/projects/ProjectImageGallery';
+import { remarkMark } from '@/lib/remarkMark';
 
 export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -29,7 +30,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
 
       {/* 본문 */}
       <article className='prose prose-invert md:prose-md mt-12 max-w-none'>
-        <MDXRemote source={mdx.content} components={{ Mark }} />
+        <MDXRemote source={mdx.content} components={{ Mark }} options={{ mdxOptions: { remarkPlugins: [remarkMark] } }} />
       </article>
     </main>
   );
