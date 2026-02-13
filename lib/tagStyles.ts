@@ -9,10 +9,10 @@ import { getTagType } from '@/lib/tagMapping';
  * - ui: UI·콘텐츠 유형 (CMS, 인터랙티브 UI 등) → 초록색
  */
 const TAG_TYPE_CLASSES: Record<TagType, string> = {
-  core: 'bg-blue-600 text-white',
-  api: 'bg-amber-500 text-white',
-  external: 'bg-yellow-500 text-white',
-  ui: 'bg-emerald-600 text-white',
+  core: 'bg-blue-700 text-zinc-100',
+  api: 'bg-amber-600 text-zinc-100',
+  external: 'bg-yellow-600 text-zinc-100',
+  ui: 'bg-emerald-700 text-zinc-100',
 };
 
 const TAG_BASE = 'rounded-md px-2 py-1 text-[11px] font-medium';
