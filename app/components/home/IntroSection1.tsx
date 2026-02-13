@@ -31,7 +31,7 @@ const BULLETS: React.ReactNode[] = [
   </>,
 ];
 
-const IMAGE = { src: '/images/detail/detail.png', alt: '프론트엔드 개발 및 협업 관련 콘셉트 이미지' } as const;
+const IMAGE = { src: '/images/detail/detail-1.png', alt: '프론트엔드 개발 및 협업 관련 콘셉트 이미지' } as const;
 
 export default function IntroSection1() {
   return <IntroSection imagePosition='right' titleColor='text-[#FFD2A9]' title={TITLE} bullets={BULLETS} image={IMAGE} />;
