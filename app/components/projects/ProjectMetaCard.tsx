@@ -1,4 +1,5 @@
 import { getAllPosts } from '@/service/posts';
+import { getTagClassNameByName } from '@/lib/tagStyles';
 import { notFound } from 'next/navigation';
 
 type Props = {
@@ -25,8 +26,13 @@ export default async function ProjectMetaCard({ slug }: Props) {
         <li className='text-zinc-100 font-semibold'>
           <span className='text-zinc-400'>상세:</span> {post.description}
         </li>
-        <li>
-          <span className='text-zinc-400'>Tech:</span> {post.techStack.join(', ')}
+        <li className='flex flex-wrap items-center gap-2'>
+          <span className='text-zinc-400'>Tech:</span>
+          {post.techStack.map((tag) => (
+            <span key={tag} className={getTagClassNameByName(tag)}>
+              {tag}
+            </span>
+          ))}
         </li>
         <li>
           <span className='text-zinc-400'>진행 기간:</span> {post.periodStart} ~ {post.periodEnd}
