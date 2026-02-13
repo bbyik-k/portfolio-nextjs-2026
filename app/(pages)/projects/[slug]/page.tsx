@@ -5,6 +5,7 @@ import ProjectMetaCard from '@/app/components/projects/ProjectMetaCard';
 import { getAllPosts } from '@/service/posts'; // 지금 쓰는 데이터 소스
 import { Mark } from '@/app/components/mdx/Mark';
 import { ProjectImageGallery } from '@/app/components/projects/ProjectImageGallery';
+import { ProjectImage } from '@/app/components/projects/ProjectImageGallery';
 
 export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -24,7 +25,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
       {/* 상단 메타 */}
       <ProjectMetaCard slug={slug} />
 
-      <ProjectImageGallery images={mdx.frontmatter.images} />
+      <ProjectImageGallery images={mdx.frontmatter.images as ProjectImage[]} />
 
       {/* 본문 */}
       <article className='prose prose-invert md:prose-md mt-12 max-w-none'>

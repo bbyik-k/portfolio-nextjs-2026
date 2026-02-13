@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-type ProjectImage = {
+export type ProjectImage = {
   src: string;
   alt: string;
   caption?: string;
