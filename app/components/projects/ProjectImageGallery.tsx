@@ -2,8 +2,8 @@ import Image from 'next/image';
 
 export type ProjectImage = {
   src: string;
-  alt: string;
-  caption?: string;
+  alt?: string;
+  caption: string;
 };
 
 type Props = {
@@ -17,7 +17,7 @@ export function ProjectImageGallery({ images }: Props) {
         {images.map((img, idx) => (
           <figure key={idx} className='space-y-2 mx-auto w-full max-w-sm sm:max-w-none'>
             <div className='relative w-full overflow-hidden rounded-xl border border-zinc-800 max-h-[520px]'>
-              <Image src={img.src} alt={img.alt} width={1200} height={800} className='w-full h-auto' />
+              <Image src={img.src} alt={img.alt ? img.alt : img.caption} width={1200} height={800} className='w-full h-auto' />
             </div>
 
             {img.caption && <figcaption className='text-sm text-zinc-400'>{img.caption}</figcaption>}

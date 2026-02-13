@@ -1,18 +1,5 @@
 [
   {
-    "title": "📋 관리자 사이트 개발 - 대량 문자 서비스",
-    "slug": "admin-sms-bulk",
-    "techStack": ["CORS", "MUI(Material-UI)", "Nivo-Chart", "REST API", "React", "WBS", "xlsx"],
-    "summary": "대량 문자 전송 플랫폼의 데이터 관리 시스템",
-    "description": "사용량 통계 조회 및 사용자 관리 기능을 포함한 관리자 페이지 외주 개발.",
-    "organization": "외주작업",
-    "periodStart": "2023-04-03",
-    "periodEnd": "2023-08-29",
-    "featured": true,
-    "thumbnail": "/images/projects/admin-sms/admin_thumb.png",
-    "thumbnailAlt": "관리자 사이트 개발 - 대량 문자 서비스"
-  },
-  {
     "title": "🌦️ 날씨 안내 콘텐츠",
     "slug": "weather-app",
     "techStack": ["React", "TypeScript", "JavaScript", "LocalStorage", "기상청 API", "i18n(다국어지원)", "TTS"],
@@ -40,7 +27,7 @@
   },
   {
     "title": "📸 사진 촬영 및 출력/전송 기능 고도화",
-    "slug": "photo-capture-streaming",
+    "slug": "photo-capture",
     "techStack": ["Base64", "MediaDevices API", "WebSocket", "canvas"],
     "summary": "사진 촬영 콘텐츠의 화질 개선, 성능 최적화를 달성한 프로젝트",
     "description": "Base64 기반 이미지 전송 방식에서, MediaDevices API를 활용한 실시간 스트리밍 적용을 통한 개선",
@@ -66,7 +53,7 @@
   },
   {
     "title": "😷 열화상 카메라 기반 사용자 안내 시스템",
-    "slug": "thermal-camera-guide",
+    "slug": "thermal-camera",
     "techStack": ["Base64", "HTML5 Canvas", "TTS", "인터랙티브 UI"],
     "summary": "COVID-19 대응 솔루션, 방역 현장에서 활용 가능한 시스템",
     "description": "열화상 카메라 및 마스크 감지 기능을 통합하여 안정적인 방역 안내 서비스 개발.",
@@ -128,5 +115,18 @@
     "featured": false,
     "thumbnail": "/images/projects/portfolio/portfolio_thumb.png",
     "thumbnailAlt": "Portfolio Site"
+  },
+  {
+    "title": "📋 관리자 사이트 개발 - 대량 문자 서비스",
+    "slug": "admin-sms-bulk",
+    "techStack": ["CORS", "MUI(Material-UI)", "Nivo-Chart", "REST API", "React", "WBS", "xlsx"],
+    "summary": "대량 문자 전송 플랫폼의 데이터 관리 시스템",
+    "description": "사용량 통계 조회 및 사용자 관리 기능을 포함한 관리자 페이지 외주 개발.",
+    "organization": "외주작업",
+    "periodStart": "2023-04-03",
+    "periodEnd": "2023-08-29",
+    "featured": true,
+    "thumbnail": "/images/projects/admin-sms/admin_thumb.png",
+    "thumbnailAlt": "관리자 사이트 개발 - 대량 문자 서비스"
   }
 ]
