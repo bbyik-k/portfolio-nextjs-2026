@@ -3,6 +3,7 @@ import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getProjectMdxBySlug } from '@/service/projects-mdx';
 import ProjectMetaCard from '@/app/components/projects/ProjectMetaCard';
 import { getAllPosts } from '@/service/posts'; // 지금 쓰는 데이터 소스
+import { Mark } from '@/app/components/mdx/Mark';
 
 export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -23,8 +24,8 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
       <ProjectMetaCard slug={slug} />
 
       {/* 본문 */}
-      <article className='prose prose-invert mt-12 max-w-none'>
-        <MDXRemote source={mdx.content} />
+      <article className='prose prose-invert md:prose-md mt-12 max-w-none'>
+        <MDXRemote source={mdx.content} components={{ Mark }} />
       </article>
     </main>
   );
