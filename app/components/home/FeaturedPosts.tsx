@@ -1,6 +1,6 @@
 import { Post } from '@/types/post';
 import Link from 'next/link';
-import PostCard from './PostCard';
+import PostGrid from '../PostGrid';
 
 type Props = { posts: Post[] };
 
@@ -19,11 +19,7 @@ export default function FeaturedPosts({ posts }: Props) {
           </Link>
         </div>
 
-        <ul className='mt-6 grid gap-4 md:grid-cols-3'>
-          {posts.map((post) => (
-            <PostCard key={post.slug} post={post} />
-          ))}
-        </ul>
+        <PostGrid posts={posts} />
       </div>
     </section>
   );

@@ -97,7 +97,7 @@ export default function ProjectCarousel({ posts }: Props) {
               <div className='carousel keen-slider' ref={sliderRef}>
                 {posts.map((post, index) => (
                   <div key={post.slug} className={`carousel__cell ${SLIDE_STYLES[index % SLIDE_STYLES.length]}`}>
-                    <Link href={`/posts/${post.slug}`} className='carousel__post-card' aria-label={`Read: ${post.title}`}>
+                    <Link href={`/projects/${post.slug}`} className='carousel__post-card' aria-label={`Read: ${post.title}`}>
                       <div className='carousel__post-image'>
                         <Image src={post.thumbnail} alt={post.thumbnailAlt ?? post.title} fill sizes='(max-width: 768px) 100vw, 480px' className='object-cover object-center' priority={index < 2} />
                       </div>

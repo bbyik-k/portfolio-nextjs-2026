@@ -5,7 +5,7 @@ import { getTagClassNameByName } from '@/lib/tagStyles';
 export default function PostCard({ post }: { post: Post }) {
   return (
     <li className='group'>
-      <Link href={`/posts/${post.slug}`} className='block rounded-2xl border border-zinc-800 bg-zinc-950/40 p-5 transition hover:border-zinc-700'>
+      <Link href={`/projects/${post.slug}`} className='block rounded-2xl border border-zinc-800 bg-zinc-950/40 p-5 transition hover:border-zinc-700'>
         <div className='flex items-center justify-between gap-4'>
           <p className='text-xs text-zinc-500'>
             <time dateTime={post.date}>{post.date}</time>
