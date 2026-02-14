@@ -3,7 +3,7 @@ import NavLink from './NavLink';
 
 const NAV = [
   { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
+  { href: 'https://bbyiktion.notion.site/resume', label: 'About', external: true },
   { href: '/projects', label: 'Projects' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -22,7 +22,7 @@ export default function Header() {
         </Link>
         <nav className='flex items-center gap-5'>
           {NAV.map((item) => (
-            <NavLink key={item.href} href={item.href} label={item.label} />
+            <NavLink key={item.href} href={item.href} label={item.label} external={item.external} />
           ))}
         </nav>
       </div>
