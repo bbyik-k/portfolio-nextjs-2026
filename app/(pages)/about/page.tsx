@@ -17,7 +17,7 @@ export default function AboutPage() {
             href='https://bbyiktion.notion.site/resume'
             target='_blank'
             rel='noopener noreferrer'
-            className='inline-flex items-center rounded-md border border-sky-500/40 bg-sky-500/10 px-5 py-2 text-sm font-medium text-sky-300 transition hover:bg-sky-500/20 hover:border-sky-400'
+            className='inline-flex items-center rounded-md border border-blue-300/40 bg-blue-400/10 px-5 py-2 text-sm font-medium text-blue-200 transition hover:bg-blue-400/20 hover:border-blue-300/20'
           >
             View Full Resume →
           </a>

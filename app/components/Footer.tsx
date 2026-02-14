@@ -19,14 +19,7 @@ export default function Footer() {
         <span>© {year} IKKIM</span>
         <nav className='flex items-center gap-5'>
           {FOOTER_LINKS.map(({ href, label, icon: Icon }) => (
-            <a
-              key={label}
-              href={href}
-              target={href.startsWith('mailto:') ? undefined : '_blank'}
-              rel={href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
-              className={linkClass}
-              aria-label={label}
-            >
+            <a key={label} href={href} target='_blank' rel={href.startsWith('mailto:') ? undefined : 'noopener noreferrer'} className={linkClass} aria-label={label}>
               <Icon className={iconClass} />
             </a>
           ))}
