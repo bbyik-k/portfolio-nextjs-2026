@@ -7,6 +7,7 @@ import { Mark } from '@/app/components/mdx/Mark';
 import { ProjectImageGallery } from '@/app/components/projects/ProjectImageGallery';
 import { ProjectImage } from '@/app/components/projects/ProjectImageGallery';
 import { remarkMark } from '@/lib/remarkMark';
+import Link from 'next/link';
 
 export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -32,6 +33,12 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
       <article className='prose prose-invert md:prose-md mt-12 max-w-none'>
         <MDXRemote source={mdx.content} components={{ Mark }} options={{ mdxOptions: { remarkPlugins: [remarkMark] } }} />
       </article>
+      <div className='mt-16'>
+        <Link href='/projects' className='inline-flex items-center gap-2 rounded-md border border-zinc-700 bg-zinc-900/40 px-4 py-2 text-sm text-zinc-200 hover:bg-zinc-800 transition'>
+          <span aria-hidden>←</span>
+          목록으로 돌아가기
+        </Link>
+      </div>
     </main>
   );
 }
