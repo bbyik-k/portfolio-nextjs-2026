@@ -9,7 +9,7 @@ type Props = {
   external?: boolean;
 };
 
-export default function NavLink({ href, label, external }: Props) {
+export default function NavLink({ href, label, external = false }: Props) {
   const pathname = usePathname();
   const active = pathname === href;
   const className = `text-sm transition-colors hover:text-gray-300 ${active ? 'text-white' : 'text-zinc-400 hover:text-white'}`;

@@ -3,7 +3,7 @@ import NavLink from './NavLink';
 
 const NAV = [
   { href: '/', label: 'Home' },
-  { href: 'https://bbyiktion.notion.site/resume', label: 'About', external: true },
+  { href: '/about', label: 'About', external: false },
   { href: '/projects', label: 'Projects' },
   { href: '/contact', label: 'Contact' },
 ];
