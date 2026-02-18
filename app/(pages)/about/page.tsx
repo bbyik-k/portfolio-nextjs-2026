@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About',
+  description: '프론트엔드 개발자 김병익의 경력 요약과 개발 방향을 소개합니다.',
+};
+
 export default function AboutPage() {
   return (
     <main className='mx-auto max-w-3xl px-4 min-h-[calc(100vh-100px)] flex items-center'>

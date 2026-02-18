@@ -16,3 +16,8 @@ export async function getFeaturedPosts(): Promise<Post[]> {
   const posts = await getAllPosts();
   return posts.filter((post) => post.featured);
 }
+
+export async function getPostBySlug(slug: string): Promise<Post | undefined> {
+  const posts = await getAllPosts();
+  return posts.find((p) => p.slug === slug);
+}

@@ -2,23 +2,56 @@ import { notFound } from 'next/navigation';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { getProjectMdxBySlug } from '@/service/projects-mdx';
 import ProjectMetaCard from '@/app/components/projects/ProjectMetaCard';
-import { getAllPosts } from '@/service/posts'; // 지금 쓰는 데이터 소스
+import { getPostBySlug } from '@/service/posts';
 import { Mark } from '@/app/components/mdx/Mark';
 import { ProjectImageGallery } from '@/app/components/projects/ProjectImageGallery';
 import { ProjectImage } from '@/app/components/projects/ProjectImageGallery';
 import { remarkMark } from '@/lib/remarkMark';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
+  if (!post) notFound();
+
+  const title = `${post.title} | 김병익`;
+  const description = post.summary;
+  const canonicalPath = `/projects/${slug}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: canonicalPath,
+    },
+    openGraph: {
+      title,
+      description,
+      url: canonicalPath,
+      type: 'article',
+      images: [
+        {
+          url: post.thumbnail,
+          width: 1200,
+          height: 630,
+          alt: post.thumbnailAlt,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [{ url: post.thumbnail, alt: post.thumbnailAlt }],
+    },
+  };
+}
 
 export default async function ProjectDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
 
-  // 1) 카드/메타 정보(JSON)
-  const posts = await getAllPosts();
-  const post = posts.find((p) => p.slug === slug);
-  // console.log(post);
-  if (!post) return notFound();
-
-  // 2) 본문(MDX)
+  // 본문(MDX)
   const mdx = getProjectMdxBySlug(slug);
   if (!mdx) return notFound();
 

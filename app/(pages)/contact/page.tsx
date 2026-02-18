@@ -1,3 +1,10 @@
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact',
+  description: '프론트엔드 개발자 김병익에게 연락할 수 있는 이메일, GitHub, 이력(노션) 링크를 제공합니다.',
+};
+
 type ContactItem = {
   label: string;
   href: string;
@@ -28,7 +35,7 @@ export default function ContactPage() {
       <section className='w-full space-y-10'>
         <h1 className='text-3xl font-bold'>Contact</h1>
 
-        <div className='mr-40 mt-6 space-y-6 text-zinc-300 text-lg rounded-2xl border border-zinc-800/80 bg-linear-to-br from-zinc-900/90 via-zinc-900 to-zinc-950 shadow-[0_18px_50px_rgba(0,0,0,0.7)] px-6 py-7 sm:px-8 sm:py-8'>
+        <div className='mt-6 space-y-6 text-zinc-300 text-lg rounded-2xl border border-zinc-800/80 bg-linear-to-br from-zinc-900/90 via-zinc-900 to-zinc-950 shadow-[0_18px_50px_rgba(0,0,0,0.7)] px-6 py-7 sm:px-8 sm:py-8'>
           <div className='space-y-1'>
             <p className='text-xl font-semibold text-white'>김병익</p>
             <p className='text-base text-zinc-300'>Byeongik Kim</p>
