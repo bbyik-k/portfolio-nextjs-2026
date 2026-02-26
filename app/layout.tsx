@@ -4,6 +4,7 @@ import './globals.css';
 import 'keen-slider/keen-slider.min.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import { siteUrl } from '@/lib/siteConfig';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -20,21 +21,19 @@ const openSans = Open_Sans({
   subsets: ['latin'],
 });
 
-const siteUrl = 'https://domain.com'; // TODO: 배포 도메인으로 교체
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: '김병익 | 프론트엔드 개발자',
     template: '%s | 김병익',
   },
-  description: '로봇·키오스크 UI와 백오피스 환경을 React·TypeScript로 5년간 설계·구현해온 프론트엔드 개발자 김병익의 포트폴리오입니다.',
+  description: '로봇 UI와 백오피스 환경을 React, TypeScript로 5년간 설계/구현해온 프론트엔드 개발자 김병익의 포트폴리오입니다.',
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: '김병익 | 프론트엔드 개발자',
-    description: 'React·TypeScript 기반으로 로봇·키오스크 UI 및 백오피스 환경을 설계·구현한 프론트엔드 개발자 김병익의 포트폴리오',
+    description: 'React, TypeScript 기반으로 로봇 UI 및 백오피스 환경을 설계/구현한 프론트엔드 개발자 김병익의 포트폴리오',
     url: siteUrl,
     siteName: '김병익 Portfolio',
     images: [
