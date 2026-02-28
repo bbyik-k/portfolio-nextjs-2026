@@ -81,6 +81,21 @@
   right: 24px;
 }
 
+@media (max-width: 768px) {
+  .carousel-arrow--left {
+    left: 8px;
+  }
+  .carousel-arrow--right {
+    right: 8px;
+  }
+}
+
+/* 데스크톱: 그대로, 모바일: 축소된 뷰포트로 카드가 화면 안에 들어오도록 */
+.carousel-viewport {
+  display: flex;
+  justify-content: center;
+}
+
 .wrapper {
   display: flex;
   justify-content: center;
@@ -107,6 +122,43 @@
   border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 1rem;
   overflow: hidden;
+}
+
+/* 모바일: 뷰포트는 항상 가용 너비 100%, 높이는 카드(cell 350px) 기준 + border 여유 (상하 잘림 방지) */
+@media (max-width: 768px) {
+  .carousel-viewport {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    height: 223px; /* 350 * 0.63 + 2px 여유 */
+    overflow: hidden;
+  }
+  .carousel-viewport .wrapper {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%) scale(0.63); /* 520*0.63≈328px, 보통 모바일에서 여유 */
+    transform-origin: center top;
+  }
+}
+
+/* 좁은 화면: 스케일을 더 줄여서 스케일된 너비(520*scale)가 viewport(100%)보다 작게 */
+@media (max-width: 400px) {
+  .carousel-viewport {
+    height: 195px; /* 350 * 0.55 + 2px 여유 */
+  }
+  .carousel-viewport .wrapper {
+    transform: translateX(-50%) scale(0.55); /* ~286px */
+  }
+}
+
+@media (max-width: 360px) {
+  .carousel-viewport {
+    height: 177px; /* 350 * 0.5 + 2px 여유 */
+  }
+  .carousel-viewport .wrapper {
+    transform: translateX(-50%) scale(0.5); /* ~260px */
+  }
 }
 
 /* 포스트 카드 (캐러셀 셀 내부): 상단 이미지 + 하단 텍스트, 여백 없이 셀 가득 */

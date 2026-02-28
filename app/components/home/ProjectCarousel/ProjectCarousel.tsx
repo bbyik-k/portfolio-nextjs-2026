@@ -92,26 +92,28 @@ export default function ProjectCarousel({ posts }: Props) {
           <button type='button' className='carousel-arrow carousel-arrow--right' onClick={() => sliderApi.current?.next()} aria-label='다음 프로젝트'>
             <ArrowRight />
           </button>
-          <div className='wrapper'>
-            <div className='scene'>
-              <div className='carousel keen-slider' ref={sliderRef}>
-                {posts.map((post, index) => (
-                  <div key={post.slug} className={`carousel__cell ${SLIDE_STYLES[index % SLIDE_STYLES.length]}`}>
-                    <Link href={`/projects/${post.slug}`} className='carousel__post-card' aria-label={`Read: ${post.title}`}>
-                      <div className='carousel__post-image'>
-                        <Image src={post.thumbnail} alt={post.thumbnailAlt ?? post.title} fill sizes='(max-width: 768px) 100vw, 480px' className='object-cover object-center' priority={index < 2} />
-                      </div>
-                      <div className='carousel__post-body'>
-                        <p className='carousel__post-meta'>
-                          <time dateTime={post.date}>{post.date}</time>
-                        </p>
-                        <h3 className='carousel__post-title'>{post.title}</h3>
-                        <p className='carousel__post-excerpt'>{post.summary}</p>
-                        <span className='carousel__post-cta'>Read →</span>
-                      </div>
-                    </Link>
-                  </div>
-                ))}
+          <div className='carousel-viewport'>
+            <div className='wrapper'>
+              <div className='scene'>
+                <div className='carousel keen-slider' ref={sliderRef}>
+                  {posts.map((post, index) => (
+                    <div key={post.slug} className={`carousel__cell ${SLIDE_STYLES[index % SLIDE_STYLES.length]}`}>
+                      <Link href={`/projects/${post.slug}`} className='carousel__post-card' aria-label={`Read: ${post.title}`}>
+                        <div className='carousel__post-image'>
+                          <Image src={post.thumbnail} alt={post.thumbnailAlt ?? post.title} fill sizes='(max-width: 768px) 100vw, 480px' className='object-cover object-center' priority={index < 2} />
+                        </div>
+                        <div className='carousel__post-body'>
+                          <p className='carousel__post-meta'>
+                            <time dateTime={post.date}>{post.date}</time>
+                          </p>
+                          <h3 className='carousel__post-title'>{post.title}</h3>
+                          <p className='carousel__post-excerpt'>{post.summary}</p>
+                          <span className='carousel__post-cta'>Read →</span>
+                        </div>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
