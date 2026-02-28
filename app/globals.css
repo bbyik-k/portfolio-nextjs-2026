@@ -22,10 +22,15 @@
   }
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 /* 은은하게 켜졌다가 다시 은은하게 꺼지는 호흡 (0% = 100% 로 루프 시 툭 끊기지 않음) */

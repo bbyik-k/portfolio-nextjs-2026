@@ -37,9 +37,9 @@ export default function IntroSection({ imagePosition, titleColor, title, bullets
           </div>
         </div>
 
-        {/* 이미지 영역 — 컨텐츠 폭 기준으로만 차지, 가능한 한 좁게 */}
-        <div className='relative shrink-0 min-h-[320px] w-[320px] max-w-full md:min-h-0 aspect-7/13 overflow-hidden mx-16'>
-          <Image src={image.src} alt={image.alt} fill className='object-contain object-left' sizes='(max-width: 768px) 100vw, 320px' priority={false} />
+        {/* 이미지 영역 — 모바일: 가운데 정렬, md 이상: 좌우 여백 유지 */}
+        <div className='relative shrink-0 min-h-[320px] w-[320px] max-w-full md:min-h-0 aspect-7/13 overflow-hidden mx-auto md:mx-16'>
+          <Image src={image.src} alt={image.alt} fill className='object-contain object-center md:object-left' sizes='(max-width: 768px) 100vw, 320px' priority={false} />
         </div>
       </div>
     </section>

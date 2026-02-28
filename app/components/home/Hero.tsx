@@ -17,7 +17,7 @@ export default function Hero() {
         <div className='mx-auto max-w-5xl px-4 -mt-8'>
           <div className='grid items-start gap-6 md:grid-cols-[1fr_auto]'>
             {/* Left */}
-            <div className='space-y-8 pr-32'>
+            <div className='space-y-8 pr-4 md:pr-32'>
               <div className='inline-flex items-center gap-2 rounded-full border border-zinc-800 bg-zinc-950/60 px-3 py-1 text-xs text-zinc-400'>
                 <span className='h-1.5 w-1.5 rounded-full bg-zinc-300' />
                 {BADGE_TEXT}
