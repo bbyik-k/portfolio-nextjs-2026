@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono, Open_Sans } from 'next/font/google';
 import './globals.css';
-import 'keen-slider/keen-slider.min.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import { siteUrl } from '@/lib/siteConfig';
@@ -68,7 +67,7 @@ export default function RootLayout({
     <html lang='ko'>
       <body className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} antialiased min-h-screen bg-background text-foreground`}>
         <Header />
-        <main className='container mx-auto max-w-full px-4 py-10 bg-[url("/images/LooperGroup2.png")] bg-no-repeat bg-cover bg-fixed bg-center'> {children}</main>
+        <main className='container mx-auto max-w-full px-4 py-10 bg-[url("/images/main-background.webp")] bg-no-repeat bg-cover bg-fixed bg-center'> {children}</main>
         <Footer />
       </body>
     </html>
