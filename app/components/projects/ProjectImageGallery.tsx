@@ -17,7 +17,15 @@ export function ProjectImageGallery({ images }: Props) {
         {images.map((img, idx) => (
           <figure key={idx} className='space-y-2 mx-auto w-full max-w-sm sm:max-w-none'>
             <div className='relative w-full overflow-hidden rounded-xl border border-zinc-800 max-h-[520px]'>
-              <Image src={img.src} alt={img.alt ? img.alt : img.caption} width={1200} height={800} className='w-full h-auto' />
+              <Image
+                src={img.src}
+                alt={img.alt ? img.alt : img.caption}
+                width={1200}
+                height={800}
+                className='w-full h-auto'
+                sizes='(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw'
+                priority={idx === 0}
+              />
             </div>
 
             {img.caption && <figcaption className='text-sm text-zinc-400'>{img.caption}</figcaption>}

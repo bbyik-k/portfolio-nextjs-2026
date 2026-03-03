@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import { siteUrl } from '@/lib/siteConfig';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import Image from 'next/image';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -68,7 +69,10 @@ export default function RootLayout({
     <html lang='ko'>
       <body className={`${geistSans.variable} ${geistMono.variable} ${openSans.variable} antialiased min-h-screen bg-background text-foreground`}>
         <Header />
-        <main className='container mx-auto max-w-full px-4 py-10 bg-[url("/images/main-background.webp")] bg-no-repeat bg-cover bg-fixed bg-center'>{children}</main>
+        <main className='relative container mx-auto max-w-full px-4 py-10 overflow-hidden'>
+          <Image src='/images/main-background.webp' alt='' aria-hidden fill priority className='-z-10 object-cover' />
+          {children}
+        </main>
         <Footer />
       </body>
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID!} />
