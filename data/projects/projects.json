@@ -106,14 +106,14 @@
   {
     "title": "🌐 Portfolio Site",
     "slug": "portfolio-site",
-    "techStack": ["Next.js", "React", "TypeScript", "Vercel"],
+    "techStack": ["Next.js", "React", "TypeScript", "Vercel", "Tailwind CSS", "Google Analytics"],
     "summary": "Next.js App Router 기반의 개인 포트폴리오 웹사이트",
     "description": "컴포넌트 설계, SEO, 반응형 UI까지 고려하여 제작한 Next.js 기반의 프로젝트입니다.",
     "organization": "사이드프로젝트",
-    "periodStart": "2025-04-16",
-    "periodEnd": "2025-04-26",
+    "periodStart": "2026-02-03",
+    "periodEnd": "2026-02-28",
     "featured": false,
-    "thumbnail": "/images/projects/portfolio/portfolio_thumb.png",
+    "thumbnail": "/images/projects/portfolio/portfolio_thumb.webp",
     "thumbnailAlt": "Portfolio Site"
   },
   {
