@@ -1,5 +1,18 @@
 [
   {
+    "title": "🤖 경비로봇 에스코트 신기능 개발",
+    "slug": "escort-app",
+    "techStack": ["Facade", "MVC", "State", "TTS", "WebSocket", "i18n(다국어지원)", "비즈니스 로직 최적화", "실시간 데이터 처리"],
+    "summary": "경비 로봇이 지정된 경로를 따라 이동하며 실시간 상황을 처리하는 서비스",
+    "description": "신기능을 단독으로 개발 후 성공적인 시연과 상용화를 통해 회사의 신규 비즈니스 모델로 확장됨.",
+    "organization": "퓨처로봇",
+    "periodStart": "2021-12-07",
+    "periodEnd": "2022-11-12",
+    "featured": true,
+    "thumbnail": "/images/projects/escort/escort_thumb.png",
+    "thumbnailAlt": "경비로봇 에스코트 신기능 개발"
+  },
+  {
     "title": "🌦️ 날씨 안내 콘텐츠",
     "slug": "weather-app",
     "techStack": ["React", "TypeScript", "JavaScript", "LocalStorage", "기상청 API", "i18n(다국어지원)", "TTS"],
@@ -38,19 +51,7 @@
     "thumbnail": "/images/projects/photo-capture/photo_thumb.png",
     "thumbnailAlt": "사진 촬영 및 출력/전송 기능 고도화"
   },
-  {
-    "title": "🤖 경비로봇 에스코트 신기능 개발",
-    "slug": "escort-app",
-    "techStack": ["Facade", "MVC", "State", "TTS", "WebSocket", "i18n(다국어지원)", "비즈니스 로직 최적화", "실시간 데이터 처리"],
-    "summary": "경비 로봇이 지정된 경로를 따라 이동하며 실시간 상황을 처리하는 서비스",
-    "description": "신기능을 단독으로 개발 후 성공적인 시연과 상용화를 통해 회사의 신규 비즈니스 모델로 확장됨.",
-    "organization": "퓨처로봇",
-    "periodStart": "2021-12-07",
-    "periodEnd": "2022-11-12",
-    "featured": true,
-    "thumbnail": "/images/projects/escort/escort_thumb.png",
-    "thumbnailAlt": "경비로봇 에스코트 신기능 개발"
-  },
+
   {
     "title": "😷 열화상 카메라 기반 사용자 안내 시스템",
     "slug": "thermal-camera",
@@ -78,6 +79,19 @@
     "thumbnailAlt": "퀴즈 콘텐츠"
   },
   {
+    "title": "🌐 Portfolio Site",
+    "slug": "portfolio-site",
+    "techStack": ["Next.js", "React", "TypeScript", "Vercel", "Tailwind CSS", "Google Analytics"],
+    "summary": "Next.js App Router 기반의 개인 포트폴리오 웹사이트",
+    "description": "컴포넌트 설계, SEO, 반응형 UI까지 고려하여 제작한 Next.js 기반의 프로젝트입니다.",
+    "organization": "사이드프로젝트",
+    "periodStart": "2026-02-03",
+    "periodEnd": "2026-02-28",
+    "featured": false,
+    "thumbnail": "/images/projects/portfolio/portfolio_thumb.webp",
+    "thumbnailAlt": "Portfolio Site"
+  },
+  {
     "title": "▶️ Iktube",
     "slug": "iktube",
     "techStack": ["Netlify", "React", "YouTube API", "postman", "timeago.js"],
@@ -102,19 +116,6 @@
     "featured": false,
     "thumbnail": "/images/projects/shoppy/shoppy_thumb.png",
     "thumbnailAlt": "Shoppy"
-  },
-  {
-    "title": "🌐 Portfolio Site",
-    "slug": "portfolio-site",
-    "techStack": ["Next.js", "React", "TypeScript", "Vercel", "Tailwind CSS", "Google Analytics"],
-    "summary": "Next.js App Router 기반의 개인 포트폴리오 웹사이트",
-    "description": "컴포넌트 설계, SEO, 반응형 UI까지 고려하여 제작한 Next.js 기반의 프로젝트입니다.",
-    "organization": "사이드프로젝트",
-    "periodStart": "2026-02-03",
-    "periodEnd": "2026-02-28",
-    "featured": false,
-    "thumbnail": "/images/projects/portfolio/portfolio_thumb.webp",
-    "thumbnailAlt": "Portfolio Site"
   },
   {
     "title": "📋 관리자 사이트 개발 - 대량 문자 서비스",
