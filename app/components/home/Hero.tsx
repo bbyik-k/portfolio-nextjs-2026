@@ -1,5 +1,6 @@
 // 'use client';
 import Image from 'next/image';
+import ScrollDownButton from './ScrollDownButton';
 
 const BADGE_TEXT = 'Frontend Portfolio · 2026';
 
@@ -13,7 +14,7 @@ const PROFILE_IMAGE = {
 export default function Hero() {
   return (
     <>
-      <section className='pb-24 min-h-[calc(100vh-5rem)] 2xl:min-h-[calc(100vh-6rem)] flex items-center'>
+      <section className='relative pb-24 min-h-[calc(100vh-5rem)] 2xl:min-h-[calc(100vh-6rem)] flex items-center'>
         <div className='mx-auto max-w-5xl px-4 -mt-8'>
           <div className='grid items-start gap-6 md:grid-cols-[1fr_auto]'>
             {/* Left */}
@@ -56,6 +57,9 @@ export default function Hero() {
             </div>
           </div>
         </div>
+
+        {/* 하단 중앙 스크롤 다운 버튼 — 클릭 시 IntroSection1로 부드럽게 이동 */}
+        <ScrollDownButton targetId='intro-1' />
       </section>
     </>
   );

@@ -8,6 +8,8 @@ export type IntroSectionProps = {
   title: React.ReactNode;
   bullets: React.ReactNode[];
   image: { src: string; alt: string };
+  /** 앵커 스크롤 타깃 id (sticky Header 가림 방지를 위해 scroll-mt 적용) */
+  id?: string;
 };
 
 function BulletItem({ children }: { children: React.ReactNode }) {
@@ -19,11 +21,11 @@ function BulletItem({ children }: { children: React.ReactNode }) {
   );
 }
 
-export default function IntroSection({ imagePosition, titleColor, title, bullets, image }: IntroSectionProps) {
+export default function IntroSection({ imagePosition, titleColor, title, bullets, image, id }: IntroSectionProps) {
   const flexRowClass = imagePosition === 'right' ? 'lg:flex-row' : 'lg:flex-row-reverse';
 
   return (
-    <section className='min-h-[calc(100vh-4rem)] w-full bg-zinc-900/50 backdrop-blur-xs'>
+    <section id={id} className='scroll-mt-20 min-h-[calc(100vh-4rem)] w-full bg-zinc-900/50 backdrop-blur-xs'>
       <div className={`mx-auto pt-12 flex w-full max-w-7xl flex-col ${flexRowClass} items-stretch justify-between`}>
         {/* 텍스트 영역 — 가능한 만큼 왼쪽 배치, 답답하지 않게 여백 유지 */}
         <div className='flex min-w-0 flex-col justify-center py-16 pl-6 pr-6 md:pl-8 md:pr-10 lg:pl-10 lg:pr-12'>
