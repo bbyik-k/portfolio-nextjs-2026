@@ -4,7 +4,7 @@
     "slug": "escort-app",
     "techStack": ["Facade", "MVC", "State", "TTS", "WebSocket", "i18n(다국어지원)", "비즈니스 로직 최적화", "실시간 데이터 처리"],
     "summary": "경비 로봇이 지정된 경로를 따라 이동하며 실시간 상황을 처리하는 서비스",
-    "description": "신기능을 단독으로 개발 후 성공적인 시연과 상용화를 통해 회사의 신규 비즈니스 모델로 확장됨.",
+    "description": "신기능을 단독으로 개발 후 성공적인 시연과 상용화를 통해 회사의 신규 비즈니스 모델로 확장됨. 고객사 4배 확장 성과.",
     "organization": "퓨처로봇",
     "periodStart": "2021-12-07",
     "periodEnd": "2022-11-12",
