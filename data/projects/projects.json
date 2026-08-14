@@ -2,7 +2,7 @@
   {
     "title": "🤖 경비로봇 에스코트 신기능 개발",
     "slug": "escort-app",
-    "techStack": ["Facade", "MVC", "State", "TTS", "WebSocket", "i18n(다국어지원)", "비즈니스 로직 최적화", "실시간 데이터 처리"],
+    "techStack": ["JavaScript", "WebSocket", "JSON-RPC", "postMessage", "Canvas 2D", "상태 기반 UI", "TTS", "i18n(다국어지원)"],
     "summary": "경비 로봇이 지정된 경로를 따라 이동하며 실시간 상황을 처리하는 서비스",
     "description": "신기능을 단독으로 개발 후 성공적인 시연과 상용화를 통해 회사의 신규 비즈니스 모델로 확장됨. 고객사 4배 확장 성과.",
     "organization": "퓨처로봇",
@@ -26,17 +26,17 @@
     "thumbnailAlt": "날씨 안내 콘텐츠"
   },
   {
-    "title": "🔧 RCMS 관리자 사이트 기능 관리",
+    "title": "🔧 RCMS 관리자 사이트 기능 개발",
     "slug": "rcms-app",
-    "techStack": ["CMS", "Chart.js", "React"],
-    "summary": "RCMS (Robot Contents Management System)",
-    "description": "기존 관리자 페이지의 데이터 시각화 및 API 연동 기능을 개선하여, 실시간 데이터 처리와 사용자 경험을 최적화한 프로젝트.",
+    "techStack": ["React", "Canvas 2D", "Chart.js", "REST API", "CMS", "백오피스", "Admin"],
+    "summary": "로봇의 운영 설정을 웹에서 관리하는 관리자 시스템 (Robot Contents Management System)",
+    "description": "현장에서 반복되던 수동 설정 작업을 UI로 전환하고, 콘텐츠 사용 데이터를 시각화한 프로젝트. 목적지 좌표 세팅 시간을 건물당 1시간에서 10분 이내로 단축.",
     "organization": "퓨처로봇",
-    "periodStart": "2022-12-14",
+    "periodStart": "2022-10-17",
     "periodEnd": "2023-06-23",
     "featured": true,
     "thumbnail": "/images/projects/rcms/rcms_thumb.png",
-    "thumbnailAlt": "RCMS 관리자 사이트 기능 관리"
+    "thumbnailAlt": "RCMS 관리자 사이트 기능 개발"
   },
   {
     "title": "📸 사진 촬영 및 출력/전송 기능 고도화",
@@ -120,9 +120,9 @@
   {
     "title": "📋 관리자 사이트 개발 - 대량 문자 서비스",
     "slug": "admin-sms-bulk",
-    "techStack": ["CORS", "MUI(Material-UI)", "Nivo-Chart", "REST API", "React", "WBS", "xlsx"],
-    "summary": "대량 문자 전송 플랫폼의 데이터 관리 시스템",
-    "description": "사용량 통계 조회 및 사용자 관리 기능을 포함한 관리자 페이지 외주 개발.",
+    "techStack": ["React", "Redux", "MUI(Material-UI)", "Nivo-Chart", "xlsx", "REST API", "WBS", "반응형", "백오피스"],
+    "summary": "대량 문자 전송 플랫폼의 통계 및 포인트 관리 어드민",
+    "description": "수기로 제공하던 고객 통계 자료를 웹 화면으로 대체. 프론트엔드를 단독으로 담당하고 API 규격 협의부터 배포까지 수행한 외주 프로젝트.",
     "organization": "외주작업",
     "periodStart": "2023-04-03",
     "periodEnd": "2023-08-29",
