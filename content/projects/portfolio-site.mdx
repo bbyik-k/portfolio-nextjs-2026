@@ -1,11 +1,11 @@
 ---
-title: 'portfolio'
-summary: 'portfolio'
+title: 'Portfolio Site'
+summary: 'MDX 기반 개인 포트폴리오 사이트'
 links:
   - label: 'GitHub'
-    href: 'https://github.com/...'
+    href: 'https://github.com/bbyik-k/portfolio-nextjs-2026'
   - label: 'Live'
-    href: 'https://...'
+    href: 'https://byeongik.com'
 images:
   - src: '/images/projects/portfolio/portfolio-1.webp'
     caption: 'Portfolio 메인화면'
@@ -29,27 +29,57 @@ images:
 
 ## 📌 프로젝트 개요
 
-- ==Next.js(App Router)== 기반으로 제작한 개인 포트폴리오 사이트로, 프로젝트 소개, 상세 페이지, ==SEO 최적화==를 중심으로 설계하였습니다.
-- ==MDX 기반== 콘텐츠 구조를 도입하여 프로젝트별 상세 설명, 이미지, 기술 스택을 유연하게 관리할 수 있도록 구성하였습니다.
-- 프로젝트 리스트 페이지와 상세 페이지를 분리하고, 동적 라우팅을 통해 확장 가능한 구조를 설계하였습니다.
-- ==Lighthouse 성능 개선== 작업을 통해 모바일 기준 Performance 90점 이상을 달성하였으며, ==이미지 최적화== 및 전역 배경 구조 개선을 적용하였습니다.
-- Google Search Console, sitemap, robots 설정을 통해 ==검색 엔진 색인 및 메타데이터 최적화==를 완료하였습니다.
+- ==Next.js(App Router)== 기반으로 제작한 개인 포트폴리오 사이트입니다.
+- 프로젝트를 ==메타 데이터와 본문 두 소스로 분리==하여, 메타는 `projects.json`에, 상세 설명은 MDX 파일에 두었습니다.  
+  slug 매칭만으로 상세 페이지가 자동 생성되므로, ==파일 두 개만 추가하면 새 프로젝트가 사이트에 반영==됩니다.
+- 마크다운에 없는 강조 문법을 쓰기 위해 ==커스텀 remark 플러그인==을 작성해,  
+  본문에 JSX 태그를 직접 쓰지 않아도 되도록 했습니다.
+- 이미지 로딩과 메타데이터를 최적화하여, PageSpeed Insights 기준  
+  ==전 페이지 모바일 Performance 95 이상, 접근성과 SEO 100==을 확보했습니다.
 
 ---
 
-## 🧑‍💻 기술 스택 및 설계
+## 🧑‍💻 주요 기여
 
-- **Framework**: [[Next.js (App Router)]]
-- **Language**: [[TypeScript]]
-- **Styling**: [[Tailwind CSS]]
-- **콘텐츠 관리**: [[MDX]]
-- **이미지 최적화**: [[next/Image]], [[WebP 변환]], [[Priority 및 Lazy Loading]]
-- **SEO 설정**: [[Metadata API]], [[Open Graph]], [[Canonical URL]], [[Sitemap]], [[Robots.txt]]
-- **성능 최적화**: [[Lighthouse]], [[Performance Budget]], [[Image Optimization]]
-- **분석 도구**: [[Google Analytics 4]]
-- **배포 환경**: [[Vercel]], [[Custom Domain]], [[HTTPS 적용]]
+- 프로젝트를 [[메타(projects.json)]]와 [[본문(MDX)]] 이중 소스로 분리하고,  
+  slug 매칭으로 [[동적 라우트를 자동 생성]]하도록 구성하였습니다.
+- 마크다운 강조 문법과 키워드 표기를 JSX로 변환하는 [[커스텀 remark 플러그인]]을 작성하였습니다.
+- [[Metadata API]]로 페이지별 메타데이터와 Open Graph, Canonical URL을 구성하고,  
+  sitemap과 robots 설정으로 검색 엔진 색인을 적용하였습니다.
+- [[next/Image]]와 WebP 변환, priority 및 lazy loading을 적용해 이미지 로딩을 최적화하였습니다.
+- 목록과 상세를 분리한 라우팅 구조와 모바일 [[반응형 레이아웃]]을 구현하였습니다.
+- [[Vercel]] 배포와 커스텀 도메인, HTTPS를 적용하고 [[GA4]]로 유입을 확인하고 있습니다.
 
 ---
+
+## 🔧 기술 선택 및 설계 고민
+
+### 메타와 본문을 나눈 이유
+
+- 프로젝트 목록 페이지에는 제목, 요약, 기술 스택, 썸네일만 필요합니다.  
+  이 정보가 MDX 본문 안에 있으면 ==목록을 그리기 위해 모든 본문 파일을 읽어야== 합니다.
+- 메타는 `projects.json`에 모아 목록에서 바로 쓰고, 상세 설명은 MDX에 두었습니다.  
+  둘은 ==slug로만 연결==되므로, 새 프로젝트를 추가할 때 라우팅 코드를 건드릴 일이 없습니다.
+- 실제로 프로젝트를 추가하는 작업이 ==JSON 항목 하나와 MDX 파일 하나==로 끝납니다.
+
+### 커스텀 remark 플러그인을 만든 이유
+
+- 본문에서 특정 구절을 강조하거나 기술 키워드를 표시하고 싶었는데,  
+  매번 JSX 태그를 직접 쓰면 ==본문이 마크업으로 지저분해집니다.==
+- 강조와 키워드 표기를 위한 문법을 정하고, 이를 ==JSX 컴포넌트로 변환하는 remark 플러그인==을 작성했습니다.
+- 결과적으로 MDX 본문은 읽기 쉬운 상태로 유지되고, 표현 방식을 바꾸고 싶을 때 ==플러그인 한 곳만 수정==하면 됩니다.
+
+### 성능과 검색 노출
+
+- 이미지가 많은 사이트라 로딩이 가장 큰 부담이었습니다.  
+  WebP로 변환하고 `next/Image`로 크기를 지정했으며,  
+  첫 화면에 보이는 이미지에만 priority를 주고 나머지는 lazy loading으로 두었습니다.
+- 검색 노출을 위해 Metadata API로 페이지별 메타데이터를 구성하고,  
+  sitemap과 robots를 설정해 Google Search Console에 색인을 등록했습니다.
+- PageSpeed Insights로 메인, 목록, 상세 페이지를 각각 측정해 ==페이지별로 편차가 없는지 확인==했습니다.  
+  목록 페이지만 SEO 점수가 낮게 나와 원인을 확인하고 보완한 결과,  
+  ==전 페이지 모바일 Performance 95 이상, 접근성과 SEO 100==을 확보했습니다.  
+  메인 페이지는 데스크톱 기준 ==네 개 지표 모두 100==입니다.
 
 ## 🚀 프로젝트 링크
 
