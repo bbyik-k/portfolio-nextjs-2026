@@ -3,6 +3,9 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Contact',
   description: '프론트엔드 개발자 김병익에게 연락할 수 있는 이메일, GitHub, 이력(노션) 링크를 제공합니다.',
+  alternates: {
+    canonical: '/contact',
+  },
 };
 
 type ContactItem = {

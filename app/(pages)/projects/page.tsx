@@ -5,6 +5,9 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Projects',
   description: '프론트엔드 개발자 김병익의 주요 프로젝트 목록입니다. React, Next.js, TypeScript 기반 프로젝트 설계와 구현 사례를 확인할 수 있습니다.',
+  alternates: {
+    canonical: '/projects',
+  },
 };
 
 export default async function ProjectsPage() {

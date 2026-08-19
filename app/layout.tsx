@@ -29,9 +29,6 @@ export const metadata: Metadata = {
     template: '%s | 김병익',
   },
   description: '로봇 UI와 백오피스 환경을 React, TypeScript로 5년간 설계/구현해온 프론트엔드 개발자 김병익의 포트폴리오입니다.',
-  alternates: {
-    canonical: '/',
-  },
   openGraph: {
     title: '김병익 | 프론트엔드 개발자',
     description: 'React, TypeScript 기반으로 로봇 UI 및 백오피스 환경을 설계/구현한 프론트엔드 개발자 김병익의 포트폴리오',

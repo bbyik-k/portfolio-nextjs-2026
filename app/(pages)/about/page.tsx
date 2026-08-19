@@ -3,6 +3,9 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'About',
   description: '프론트엔드 개발자 김병익의 경력 요약과 개발 방향을 소개합니다.',
+  alternates: {
+    canonical: '/about',
+  },
 };
 
 export default function AboutPage() {
